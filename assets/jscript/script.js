@@ -34,8 +34,8 @@ let questions = [
     {
         question: "A gaggle of sheep",
         answers: [
-            {option:"I don't think so", answer : false},
-            {option:"I think that's right", answer : true},
+            {option:"I don't think so", answer : true},
+            {option:"I think that's right", answer : false},
         ] 
     },
     {
@@ -63,6 +63,58 @@ function beginQuiz() {
    trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
    trueBtn.onclick = () => {
        if(questions[currentQuestion].answers[0].answer) {
+           if(score < 5) {
+               score++;
+           }
+       }
+       userScore.innerHTML = score;
+       if(currentQuestion < 4) {
+           next();
+       }
+   }
+  falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
+   falseBtn.onclick = () => {
+       if(questions[currentQuestion].answers[1].answer) {
+           if(score < 5) {
+               score++;
+           }
+       }
+       userScore.innerHTML = score;
+       if(currentQuestion < 4) {
+           next();
+       }
+   }
+ 
+   prevBtn.classList.add("hide");
+}
+ 
+beginQuiz();
+   /** reset score etc if restarted*/
+
+function restart() {
+   currentQuestion = 0;
+   prevBtn.classList.remove("hide");
+   nextBtn.classList.remove("hide");
+   submitBtn.classList.remove("hide");
+   trueBtn.classList.remove("hide");
+   falseBtn.classList.remove("hide");
+   score = 0;
+   userScore.innerHTML = score;
+   beginQuiz();
+}   
+
+/**function to jump to next question */
+
+function next() {
+   currentQuestion++;
+   if(currentQuestion >= 2) {
+       nextBtn.classList.add("hide");
+       prevBtn.classList.remove("hide");
+   }
+   questionText.innerHTML = questions[currentQuestion].question;
+   trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
+   trueBtn.onclick = () => {
+       if(questions[currentQuestion].answers[0].answer) {
            if(score < 3) {
                score++;
            }
@@ -72,7 +124,8 @@ function beginQuiz() {
            next();
        }
    }
-  falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
+ 
+   falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
    falseBtn.onclick = () => {
        if(questions[currentQuestion].answers[1].answer) {
            if(score < 3) {
@@ -85,8 +138,15 @@ function beginQuiz() {
        }
    }
  
-   prevBtn.classList.add("hide");
+   prevBtn.classList.remove("hide");
 }
- 
-beginQuiz();
-   /** */
+
+/** function for submit button */
+function submit() {
+   prevBtn.classList.add("hide");
+   nextBtn.classList.add("hide");
+   submitBtn.classList.add("hide");
+   trueBtn.classList.add("hide");
+   falseBtn.classList.add("hide");   
+   questionText.innerHTML ="Congratulations on submitting the Quiz!"
+}
