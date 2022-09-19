@@ -6,7 +6,7 @@ const trueBtn = document.getElementById("True");
 const falseBtn = document.getElementById("False");
 const userScore = document.getElementById("user-score");
 const totalScore = document.getElementById("total-score");
-const questionText = document.getElementById("question-text")
+const questionText = document.getElementById("question-text");
 
 /**questions for quiz */
 let currentQuestion = 0;
@@ -93,10 +93,12 @@ function beginQuiz() {
 }
  
 beginQuiz();
+
    /** reset score etc if restarted*/
 
 function restart() {
    currentQuestion = 0;
+   document.getElementById("result").innerHTML = " ";
    prevBtn.classList.remove("hide");
    nextBtn.classList.remove("hide");
    submitBtn.classList.remove("hide");
@@ -104,10 +106,11 @@ function restart() {
    falseBtn.classList.remove("hide");
    score = 0;
    userScore.innerHTML = score;
+
    beginQuiz();
 }   
 
-/**function to jump to next question */
+/**function to jump to next question, next button */
 
 function next() {
    currentQuestion++;
@@ -145,6 +148,7 @@ function next() {
    prevBtn.classList.remove("hide");
 }
 
+/**function to make prev button work */
 
 function prev() {
     currentQuestion--;
@@ -181,12 +185,29 @@ function prev() {
   
     nextBtn.classList.remove("hide");
  }
+
 /** function for submit button */
+
 function submit() {
+
+
    prevBtn.classList.add("hide");
    nextBtn.classList.add("hide");
    submitBtn.classList.add("hide");
    trueBtn.classList.add("hide");
-   falseBtn.classList.add("hide");   
-   questionText.innerHTML ="Well done! You did great."
-}
+   falseBtn.classList.add("hide");  
+
+   let result;
+
+   if (score >= 3) {
+    result = "Well done, you did great!";
+   } else {
+    result = "Maybe you should try again!";
+   }
+  
+
+document.getElementById("result").innerHTML = result;
+/**message on submit depending on score */
+ } 
+
+

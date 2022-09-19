@@ -93,3 +93,11 @@ header h2{
 .hide {
    display: none;
 }
+
+#result { 
+   font-size: 2em;
+   font-family: 'Secular One', sans-serif;
+   padding: 1%;
+   line-height: 1.60em;
+   letter-spacing: -0.08em ;
+}
