@@ -9,6 +9,9 @@ const totalScore = document.getElementById("total-score");
 const questionText = document.getElementById("question-text")
 
 /**questions for quiz */
+let currentQuestion = 0;
+let score = 0;
+
 let questions = [
     {
         question: "A pod of dolphins",
@@ -54,6 +57,7 @@ prevBtn.addEventListener("click", prev);
 nextBtn.addEventListener("click",next);
 submitBtn.addEventListener("click",submit);
 
+
 /**Begin Quiz function to start when page loads */
 
 function beginQuiz() {
@@ -68,7 +72,7 @@ function beginQuiz() {
            }
        }
        userScore.innerHTML = score;
-       if(currentQuestion < 4) {
+       if(currentQuestion < 5) {
            next();
        }
    }
@@ -80,7 +84,7 @@ function beginQuiz() {
            }
        }
        userScore.innerHTML = score;
-       if(currentQuestion < 4) {
+       if(currentQuestion < 5) {
            next();
        }
    }
@@ -107,7 +111,7 @@ function restart() {
 
 function next() {
    currentQuestion++;
-   if(currentQuestion >= 2) {
+   if(currentQuestion >= 1) {
        nextBtn.classList.add("hide");
        prevBtn.classList.remove("hide");
    }
@@ -115,12 +119,12 @@ function next() {
    trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
    trueBtn.onclick = () => {
        if(questions[currentQuestion].answers[0].answer) {
-           if(score < 3) {
+           if(score < 5) {
                score++;
            }
        }
        userScore.innerHTML = score;
-       if(currentQuestion < 2) {
+       if(currentQuestion < 5) {
            next();
        }
    }
@@ -128,12 +132,12 @@ function next() {
    falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
    falseBtn.onclick = () => {
        if(questions[currentQuestion].answers[1].answer) {
-           if(score < 3) {
+           if(score < 5) {
                score++;
            }
        }
        userScore.innerHTML = score;
-       if(currentQuestion < 2) {
+       if(currentQuestion < 5) {
            next();
        }
    }
@@ -141,6 +145,42 @@ function next() {
    prevBtn.classList.remove("hide");
 }
 
+
+function prev() {
+    currentQuestion--;
+    if(currentQuestion <= 0) {
+        nextBtn.classList.remove("hide");
+        prevBtn.classList.add("hide");
+    }
+    questionText.innerHTML = questions[currentQuestion].question;
+    trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
+    trueBtn.onclick = () => {
+        if(questions[currentQuestion].answers[0].answer) {
+            if(score < 5) {
+                score++;
+            }
+        }
+        userScore.innerHTML = score;
+        if(currentQuestion < 5) {
+            next();
+        }
+    }
+  
+    falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
+    falseBtn.onclick = () => {
+        if(questions[currentQuestion].answers[1].answer) {
+            if(score < 5) {
+                score++;
+            }
+        }
+        userScore.innerHTML = score;
+        if(currentQuestion < 5) {
+            next();
+        }
+    }
+  
+    nextBtn.classList.remove("hide");
+ }
 /** function for submit button */
 function submit() {
    prevBtn.classList.add("hide");
@@ -148,5 +188,5 @@ function submit() {
    submitBtn.classList.add("hide");
    trueBtn.classList.add("hide");
    falseBtn.classList.add("hide");   
-   questionText.innerHTML ="Congratulations on submitting the Quiz!"
+   questionText.innerHTML ="Well done! You did great."
 }
