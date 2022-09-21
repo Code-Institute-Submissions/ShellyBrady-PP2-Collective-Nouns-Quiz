@@ -3,11 +3,13 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto' , sans-serif;
 }
 
+/*style body */
+html {background-color: rgb(238,174,202);}
+
 body {
-   background-color: rgb(238,174,202);
    background: linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
    background-repeat: no-repeat;
    width: 100vw;
@@ -15,12 +17,13 @@ body {
    align-items: center;
    justify-content: center;
 }
+
 /*style header*/
 header {
    margin: 5%;
    position: relative;
-
 }
+
 header h1{
     font-size: 2.5em;
     font-family: 'Fugaz One' , sans-serif;
@@ -28,16 +31,34 @@ header h1{
 
 header h2{
    font-size: 1.75em;
-   font-family: 'Fugaz One' , sans-serif;
+   font-family: 'Secular One' , sans-serif;
    margin-top: 10%;
 }
 
+h3 {
+   font-size: 1.75em;
+   font-family: 'Poppins', sans-serif;
+   margin: 2%;
+}
+
+/*style question area*/
 #question-text {
     font-size: 2em;
-    font-family: 'Secular One', sans-serif;
-    padding: 1%;
     line-height: 1.75em;
+    font-weight: 600;
    }
+
+.game-question-container{
+   margin-left: 4%;
+   margin-right: 4%;
+   height: 6rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 2px solid #614bf2;
+   border-radius: 25px;
+   background-color:#e6effc ;
+}
 
 .container {
    max-width: 80%;
@@ -52,6 +73,8 @@ header h2{
    margin-bottom: 5%;
 }
 
+/*style score area*/
+
 .score {
    font-size: 2em;
    font-weight: bold;
@@ -59,25 +82,37 @@ header h2{
 }
  
 #user-score {
-   color: #c783a7;
+   color:#4315cf ;
 }
  
 #total-score {
-   color: #2774d1;
+   color:#bd4bf2 ;
 }
 
+/*style buttons*/
 .btn {
    font-size: 1.15em;
    font-weight: bold;
-   box-shadow: 0 6px 12px -2px rgba(#8ca4ce, .15);
-   background: #8484e1 ;
+   box-shadow: 0 6px 12px -2px rgba(#f1e6fc, .15);
+   background: #4c1b63 ;
    border-radius: 4px;
    padding: 1%;
    color: white;
    margin: 1%;
    cursor: pointer;
+   border-color: #f1e6fc;
 }
 
+.btn:hover {
+   background-color:#bd4bf2;
+   transition: 0.7s;
+}
+/*highlight buttons when using tab button or arrows on keyboard*/
+.btn:focus {
+   outline-color: transparent;
+   outline-style:solid;
+   box-shadow: 0 0 0 4px #5a01a7;
+}
 .options {
    padding: 1%;
    margin: 1%;
@@ -94,10 +129,56 @@ header h2{
    display: none;
 }
 
+/*result and end image styling*/
 #result { 
    font-size: 2em;
    font-family: 'Secular One', sans-serif;
    padding: 1%;
    line-height: 1.60em;
    letter-spacing: -0.08em ;
+}
+
+#final-image{
+   height: 10vh;
+}
+
+
+/* media queries for screens 600px and below in width*/
+
+@media only screen and (max-width: 600px) {
+
+header h1{
+   font-size: 1.6em;
+}
+
+header h2{
+   font-size: 1.4em;
+   margin-top: 5%;
+   color:#0e1f54 ;
+}
+
+.container {
+   max-width: 90%;
+}
+
+img#quiz-image {
+max-width: 80%;
+}
+}
+
+/*media queries to improve responsiveness in screens over 601px in width*/
+@media only screen and (min-width: 601px) {
+ 
+img#quiz-image {
+max-width: 100%;
+}   
+
+.btn {
+padding: 5%;   
+font-size: 1.30em;
+}
+
+#question-text {
+font-size: 2.5em;
+}
 }

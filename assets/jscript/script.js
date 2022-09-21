@@ -8,6 +8,8 @@ const userScore = document.getElementById("user-score");
 const totalScore = document.getElementById("total-score");
 const questionText = document.getElementById("question-text");
 
+let quizImage = document.getElementById('quiz-image');
+
 /**questions for quiz */
 let currentQuestion = 0;
 let score = 0;
@@ -106,7 +108,7 @@ function restart() {
    falseBtn.classList.remove("hide");
    score = 0;
    userScore.innerHTML = score;
-
+   quizImage.src = " ";
    beginQuiz();
 }   
 
@@ -198,16 +200,18 @@ function submit() {
    falseBtn.classList.add("hide");  
 
    let result;
-
+/**message on submit depending on score */
    if (score >= 3) {
+    quizImage.src = "assets/images/welldone.jpg"
     result = "Well done, you did great!";
    } else {
+    quizImage.src = "assets/images/tryagain.jpg"
     result = "Maybe you should try again!";
    }
-  
 
+/**image shown dependant on result */
+document.getElementById("quiz-image").innerHTML = quizImage
 document.getElementById("result").innerHTML = result;
-/**message on submit depending on score */
- } 
 
+ } 
 
