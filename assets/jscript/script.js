@@ -203,7 +203,6 @@ function submit() {
 /**message on submit depending on score */
    if (score >= 3) {
     quizImage.src = "assets/images/welldone.jpg"
-    image.alt = "Your text here"
     result = "Well done, you did great!";
    } else {
     quizImage.src = "assets/images/tryagain.jpg"
