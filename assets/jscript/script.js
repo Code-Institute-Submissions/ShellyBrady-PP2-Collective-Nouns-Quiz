@@ -1,3 +1,4 @@
+
 const restartBtn = document.getElementById("restart");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
@@ -50,7 +51,7 @@ let questions = [
             {option:"I think that's right", answer : true},
         ] 
     }
-]
+];
 
 /**on click events for buttons */
 
@@ -77,7 +78,7 @@ function beginQuiz() {
        if(currentQuestion < 5) {
            next();
        }
-   }
+   };
   falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
    falseBtn.onclick = () => {
        if(questions[currentQuestion].answers[1].answer) {
@@ -89,7 +90,7 @@ function beginQuiz() {
        if(currentQuestion < 5) {
            next();
        }
-   }
+   };
  
    prevBtn.classList.add("hide");
 }
@@ -132,7 +133,7 @@ function next() {
        if(currentQuestion < 5) {
            next();
        }
-   }
+   };
  
    falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
    falseBtn.onclick = () => {
@@ -145,7 +146,7 @@ function next() {
        if(currentQuestion < 5) {
            next();
        }
-   }
+   };
  
    prevBtn.classList.remove("hide");
 }
@@ -170,7 +171,7 @@ function prev() {
         if(currentQuestion < 5) {
             next();
         }
-    }
+    };
   
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
     falseBtn.onclick = () => {
@@ -183,7 +184,7 @@ function prev() {
         if(currentQuestion < 5) {
             next();
         }
-    }
+    };
   
     nextBtn.classList.remove("hide");
  }
@@ -202,15 +203,15 @@ function submit() {
    let result;
 /**message on submit depending on score */
    if (score >= 3) {
-    quizImage.src = "assets/images/welldone.jpg"
+    quizImage.src = "assets/images/welldone.jpg";
     result = "Well done, you did great!";
    } else {
-    quizImage.src = "assets/images/tryagain.jpg"
+    quizImage.src = "assets/images/tryagain.jpg";
     result = "Maybe you should try again!";
    }
 
 /**image shown dependant on result */
-document.getElementById("quiz-image").innerHTML = quizImage
+document.getElementById("quiz-image").innerHTML = quizImage;
 document.getElementById("result").innerHTML = result;
 
  } 
