@@ -93,7 +93,7 @@ h3 {
 .btn {
    font-size: 1.15em;
    font-weight: bold;
-   box-shadow: 0 6px 12px -2px rgba(pink, .15);
+   box-shadow: 0 6px 12px -2px (pink, .15);
    background: #4c1b63 ;
    border-radius: 4px;
    padding: 1%;
