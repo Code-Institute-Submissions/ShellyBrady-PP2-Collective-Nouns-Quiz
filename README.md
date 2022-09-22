@@ -103,3 +103,78 @@ If I were to develop this quiz further I might add some of the features in the l
 
 * I used Balsamiq to make  a basic wireframe of the quiz outline I wanted to have. 
 
+
+# Testing
+
+## Manual Testing
+
+* Desktop
+    * Pages all load and all page features are working.
+    * Tested and working as intended on Firefox and Chrome browsers.
+
+* Mobile
+    * Tested and working as intended on iPhone SE, iPhone 12, Samsung Galaxy S8 and Note.
+
+* Google Chrome Dev Tools
+    * Tested and working responsively on all available devices.
+
+* Links 
+    * All links clicked and all resulting in expected results.  
+
+## Automated Testing
+
+![CSS Validation](README.Images/CSS%20W3%20Validation%20Passed.PNG)
+
+![lighthouse testing](README.Images/lighthouse%20testing.PNG)
+
+![HTML Validation](README.Images/Nu%20HTML%20Validation.PNG)
+
+![JS Validation](README.Images/JSHint%20JavaScript%20Validation%20Passed.PNG)
+
+## Validator Testing
+
+* Html
+Issue with the image link for the results images on JavaScript. Empty src and alt not allowed but I couldn't get the images working another way in the time I had left. If I had more time I would have fixed it or removed images altogether if I could not figure it out.
+
+* CSS
+Passed validation.
+
+* JavaScript
+Passed validation besides warnings for const use and to use ES6.
+
+* Lighthouse
+Passed, see screenshot.
+
+
+# Deployment
+
+The site was deployed to GitHub pages. 
+The steps to deploy are as follows:
+In the GitHub repository, navigate to the Settings tab and choose Pages.
+From the source section drop-down menu, select the Master Branch
+Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+Issue I had when deploying: my project was private and so when I went into Github Pages the drop down list was not there. I had to go and make my project live before returning to continue deployong my website as directed.
+
+The live link can be found here -[Collective Noun Quiz](https://shellybrady.github.io/PP2-Collective-Nouns-Quiz/)
+
+# Credits 
+
+## Content
+- The fonts used were imported from Google Fonts https://fonts.google.com
+
+## Media
+- Images are open source and from Pixabay.
+
+## Code
+Credit and Acknowledment to the following sites for help with code or inspiration:
+- W3Schools for general information.
+- www.codingninjas.com for a lot of basic code help to start my project off with.
+- Stack Overflow, Geeks4Geeks and Code Institute for tips, etc.
+- amiresponsive? for image of deployed website of different devices.
+- Balsamiq for making wireframes.
+
+# Acknowledgements
+
+I would like to thank everyone at Code Institute for the support and guidance, my cohort on Slack and the wider Slack community.
+I would also like to thank my family and my cats for not giving up on me when JavaScript made me want to give up on myself.
+
