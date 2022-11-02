@@ -14,7 +14,17 @@ let quizImage = document.getElementById('quiz-image');
 /**Ask the player's name and if the want to play */
 
 playerName = prompt("What is your name?");
-confirmPlay = confirm("Hello, " + playerName + "do you want to play?");
+
+function confirmPlay() {
+    let confirmPlay = confirm("Hello, " + playerName + "would you like to play?");
+
+    if (confirmPlay) {
+        alert("Ok, " + playerName + "let's play!");
+    }
+    else {
+        alert("Goodbye, " + playerName + "!");
+    }
+}
 
 /**questions for quiz */
 let currentQuestion = 0;
