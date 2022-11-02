@@ -11,6 +11,11 @@ const questionText = document.getElementById("question-text");
 
 let quizImage = document.getElementById('quiz-image');
 
+/**Ask the player's name and if the want to play */
+
+playerName = prompt("What is your name?");
+confirmPlay = confirm("Hello, " + playerName + "do you want to play?");
+
 /**questions for quiz */
 let currentQuestion = 0;
 let score = 0;
