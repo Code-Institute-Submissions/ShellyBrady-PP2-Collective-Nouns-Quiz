@@ -17,14 +17,13 @@ playerName = prompt("What is your name?");
 
 function confirmPlay() {
     let confirmPlay = confirm("Hello, " + playerName + "would you like to play?");
-
     if (confirmPlay) {
         alert("Ok, " + playerName + "let's play!");
-    }
-    else {
+    } else {
         alert("Goodbye, " + playerName + "!");
     }
 }
+
 
 /**questions for quiz */
 let currentQuestion = 0;
