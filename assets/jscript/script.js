@@ -17,7 +17,7 @@ let score = 0 ;
 let questionCounter = 0;
 
 //Define shuffle using Fisher-Yates algorithm
-function shuffle(questions) {
+function shuffle(array) {
     for (let i = questions.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
