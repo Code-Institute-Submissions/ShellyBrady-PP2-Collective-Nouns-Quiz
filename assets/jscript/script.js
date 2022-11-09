@@ -4,8 +4,9 @@
 const question = document.getElementById("question");
 const maxQuestion = 5;
 const trueBtn = document.getElementById("True");
-const falseBtn = document.getElementById("False")
-
+const falseBtn = document.getElementById("False");
+const totalScore = document.getElementById("total-score");
+const userScore = document.getElementById("user-score");
 
 let currentQuestion = 0;
 let score = 0 ;
@@ -93,8 +94,46 @@ let questions = shuffle([
     }
 ]);
 
-//function to begin quiz and to choose question randomly
+//event listeners for buttons
+nextBtn.addEventListener("click", next);
+prevBtn.addEventListener("click", prev);
+
+
+//function to begin quiz and to choose questions
+
+/*this function mostly the same as previously submitted project as sourced
+https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript*/
 
 function startQuiz() {
+  currentQuestion = 0;
+  totalScore.innerHTML = questions.length;
+  question.innerHTML = questions[currentQuestion].question;
+  trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
+  trueBtn.onclick = () => {
+    if(questions[currentQuestion].answers[0].answer) {
+        if(score < 5) {
+            score++;
+            }
+    }
+    userScore.innerHTML = score;
+    if(currentQuestion < 5) {
+        next();
+    }
+    };
+   falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
+    falseBtn.onclick = () => {
+        if(questions[currentQuestion].answers[1].answer) {
+            if(score < 5) {
+                score++;
+            }
+        }
+        userScore.innerHTML = score;
+        if(currentQuestion < 5) {
+            next();
+        }
+    };
   
-}
+    prevBtn.classList.add("hide");      
+}           
+
+startQuiz()
