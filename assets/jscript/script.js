@@ -98,11 +98,28 @@ submitBtn.addEventListener("click", submit);
 restartBtn.addEventListener("click", restart);
 
 
-//function to begin quiz and to choose questions
+//next question function
+function next(){
+    currentQuestion++;
+}
+    question.innerHTML = questions[currentQuestion].question;
+    trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
+    trueBtn.onclick = () => {
+        if(questions[currentQuestion].answers[0].answer) {
+            if(score < 5) {
+                score++;
+            }
+        }
+        userScore.innerHTML = score ;
+        if(currentQuestion < 5) {
+            next();
+        }
+    };
+
 
 /*this function mostly the same as previously submitted project as sourced
 https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript*/
-
+//function to begin quiz and to choose questions
 function startQuiz() {
   currentQuestion = 0;
   totalScore.innerHTML = questions.length;
@@ -132,7 +149,9 @@ function startQuiz() {
         }
     };
   
-    prevBtn.classList.add("hide");      
+    prevBtn.classList.add("hide"); 
+
 }           
 
 startQuiz();
+
