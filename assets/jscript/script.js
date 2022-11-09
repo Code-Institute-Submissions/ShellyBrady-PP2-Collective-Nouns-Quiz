@@ -7,6 +7,10 @@ const trueBtn = document.getElementById("True");
 const falseBtn = document.getElementById("False");
 const totalScore = document.getElementById("total-score");
 const userScore = document.getElementById("user-score");
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
+const restartBtn = document.getElementById("restart");
+const submitBtn = document.getElementById("submit");
 
 let currentQuestion = 0;
 let score = 0 ;
