@@ -101,6 +101,8 @@ let questions = shuffle([
 //event listeners for buttons
 nextBtn.addEventListener("click", next);
 prevBtn.addEventListener("click", prev);
+submitBtn.addEventListener("click", submit);
+restartBtn.addEventListener("click", restart);
 
 
 //function to begin quiz and to choose questions
@@ -140,4 +142,4 @@ function startQuiz() {
     prevBtn.classList.add("hide");      
 }           
 
-startQuiz()
+startQuiz();
