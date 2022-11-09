@@ -105,7 +105,7 @@ https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-j
 
 function startQuiz() {
   currentQuestion = 0;
-  totalScore.innerHTML = array.length;
+  totalScore.innerHTML = questions.length;
   question.innerHTML = questions[currentQuestion].question;
   trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
   trueBtn.onclick = () => {
