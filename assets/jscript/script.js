@@ -18,7 +18,7 @@ let questionCounter = 0;
 
 //Define shuffle using Fisher-Yates algorithm
 function shuffle(array) {
-    for (let i = questions.length - 1; i > 0; i--) {
+    for (let i = array.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
   }
@@ -111,7 +111,7 @@ https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-j
 
 function startQuiz() {
   currentQuestion = 0;
-  totalScore.innerHTML = questions.length;
+  totalScore.innerHTML = array.length;
   question.innerHTML = questions[currentQuestion].question;
   trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
   trueBtn.onclick = () => {
