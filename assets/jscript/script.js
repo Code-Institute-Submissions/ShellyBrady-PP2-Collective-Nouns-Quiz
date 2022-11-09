@@ -16,15 +16,9 @@ let currentQuestion = 0;
 let score = 0 ;
 let questionCounter = 0;
 
-//Define shuffle using Fisher-Yates algorithm
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-  }
-  }
+
 //set up questions array for quiz, add shuffle to change order
-let questions = shuffle([
+let questions = [
     {
         question: "A pod of dolphins",
         answers: [
@@ -95,7 +89,7 @@ let questions = shuffle([
             {option:"I think that's right", answer : true},
         ] 
     }
-]);
+];
 
 //event listeners for buttons
 nextBtn.addEventListener("click", next);
