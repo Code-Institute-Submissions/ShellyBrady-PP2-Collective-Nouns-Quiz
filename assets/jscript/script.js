@@ -2,13 +2,17 @@
 
 //Declare variables first as is best practice
 const question = document.getElementById("question");
-
+const maxQuestion = 5;
+const trueBtn = document.getElementById("True");
+const falseBtn = document.getElementById("False")
 //set up questions array for quiz
 
 let currentQuestion = 0;
 let score = 0 ;
+let questionCounter = 0;
 
-let questions = [
+
+let questions = shuffle([
     {
         question: "A pod of dolphins",
         answers: [
@@ -79,9 +83,10 @@ let questions = [
             {option:"I think that's right", answer : true},
         ] 
     }
-];
+]);
 
+//function to begin quiz and to choose question randomly
 
-
-
-
+function startQuiz() {
+  
+}
