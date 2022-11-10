@@ -226,7 +226,7 @@ function restart() {
     document.getElementById("result").innerHTML = " ";
     prevBtn.classList.remove("hide");
     restartBtn.classList.add("hide");
-    nextBtn.classList.add("hide");
+    nextBtn.classList.remove("hide");
     submitBtn.classList.remove("hide");
     trueBtn.classList.remove("hide");
     falseBtn.classList.remove("hide");
@@ -251,7 +251,7 @@ function startQuiz() {
             }
     }
     userScore.innerHTML = score;
-    if(questionCounter< 10) {
+    if(questionCounter < 10) {
         next();
     }
     else if(questionCounter === 10) {
