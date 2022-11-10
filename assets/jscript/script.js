@@ -6,14 +6,13 @@ const maxQuestion = 10;
 const trueBtn = document.getElementById("True");
 const falseBtn = document.getElementById("False");
 const totalScore = document.getElementById("total-score");
-const userScore = document.getElementById("user-score");
 const nextBtn = document.getElementById("next");
 const prevBtn = document.getElementById("prev");
 const restartBtn = document.getElementById("restart");
 const submitBtn = document.getElementById("submit");
 const answers = document.getElementById("answers");
 
-
+let userScore = document.getElementById("user-score");
 let currentQuestion = 0;
 let score = 0 ;
 let questionCounter = 0;
@@ -98,6 +97,9 @@ prevBtn.addEventListener("click", prev);
 submitBtn.addEventListener("click", submit);
 restartBtn.addEventListener("click", restart);
 
+/**based on code from 
+https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript
+with some changes */
 
 //next question function
 function next(){
@@ -119,7 +121,7 @@ function next(){
         if(questionCounter < 10) {
             next();
         }
-        if( questionCounter === 9) {
+        if(questionCounter = 10) {
             submit();
        }
     };
@@ -134,7 +136,7 @@ function next(){
        if(questionCounter < 10) {
            next();
        }
-       if(questionCounter === 9) {
+       if(questionCounter = 10) {
             submit();
        }
     };
@@ -177,7 +179,7 @@ function prev() {
         if(questionCounter < 10) {
             next();
         }
-        if(questionCounter === 10){
+        if(questionCounter = 10){
             submit();
         }
     };
@@ -196,10 +198,11 @@ function submit() {
     falseBtn.classList.add("hide");  
     restartBtn.classList.remove("hide");
 
+    userScore.innerHTML = score;
  /**message on submit depending on score */
     let result;
 
-    if (score === 10) {
+    if (score = 10) {
         result = "Wow, you really know your stuff!";
     }
     else if (score >= 7) {
@@ -260,7 +263,7 @@ function startQuiz() {
                 score++;
             }
         }
-        userScore.innerHTML = score;
+        
         if(currentQuestion < 10) {
             next();
         }
