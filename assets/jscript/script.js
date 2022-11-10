@@ -189,6 +189,8 @@ function prev() {
 function submit() {
     
  /**message on submit depending on score */
+    let result;
+    
     if (score >= 7) {
      result = "Well done, you did great!";
     } 
@@ -208,7 +210,7 @@ function submit() {
  
   /** reset score etc if restarted*/
 
-  function restart() {
+function restart() {
     currentQuestion = 0;
     document.getElementById("result").innerHTML = " ";
     prevBtn.classList.remove("hide");
