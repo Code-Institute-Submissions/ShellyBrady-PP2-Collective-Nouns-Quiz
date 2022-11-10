@@ -183,7 +183,7 @@ function submit() {
     let result;
  /**message on submit depending on score */
     if (score >= 3) {
-     quizImage.src = "/workspace/PP2-Collective-Nouns-Quiz/assets/images/welldone.jpg"
+     quizImage.src = "/workspace/PP2-Collective-Nouns-Quiz/assets/images/welldone.jpg";
      result = "Well done, you did great!";
     } else {
      quizImage.src = "assets/images/tryagain.jpg";
