@@ -106,7 +106,7 @@ function next(){
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            if(score < 10) {
+            if(currentQuestion < 10) {
                 score++;
             }
         }
@@ -118,7 +118,7 @@ function next(){
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
    falseBtn.onclick = () => {
        if(questions[currentQuestion].answers[1].answer) {
-           if(score < 10) {
+           if(currentQuestion < 10) {
                score++;
            }
        }
@@ -144,12 +144,12 @@ function prev() {
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            if(score < 5) {
+            if(currentQuestion < 10) {
                 score++;
             }
         }
         userScore.innerHTML = score;
-        if(currentQuestion < 5) {
+        if(currentQuestion < 10) {
             next();
         }
     };
@@ -157,13 +157,16 @@ function prev() {
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
     falseBtn.onclick = () => {
         if(questions[currentQuestion].answers[1].answer) {
-            if(score < 5) {
+            if(score < 10) {
                 score++;
             }
         }
         userScore.innerHTML = score;
-        if(currentQuestion < 5) {
+        if(currentQuestion < 10) {
             next();
+        }
+        if(currentQuestion = 10){
+            submit();
         }
     };
   
@@ -181,9 +184,8 @@ function submit() {
     trueBtn.classList.add("hide");
     falseBtn.classList.add("hide");  
  
-    let result;
  /**message on submit depending on score */
-    if (score >= 5) {
+    if (score >= 7) {
      result = "Well done, you did great!";
     } else {
      result = "Maybe you should try again!";
@@ -216,24 +218,24 @@ function startQuiz() {
   trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
   trueBtn.onclick = () => {
     if(questions[currentQuestion].answers[0].answer) {
-        if(score < 5) {
+        if(currentQuestion < 10) {
             score++;
             }
     }
     userScore.innerHTML = score;
-    if(currentQuestion < 5) {
+    if(currentQuestion < 10) {
         next();
     }
     };
    falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
     falseBtn.onclick = () => {
         if(questions[currentQuestion].answers[1].answer) {
-            if(score < 5) {
+            if(currentQuestion < 10) {
                 score++;
             }
         }
         userScore.innerHTML = score;
-        if(currentQuestion < 5) {
+        if(currentQuestion < 10) {
             next();
         }
     };
