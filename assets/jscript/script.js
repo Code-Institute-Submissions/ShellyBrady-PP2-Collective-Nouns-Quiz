@@ -103,7 +103,7 @@ restartBtn.addEventListener("click", restart);
 function next(){
     currentQuestion++;
     if(currentQuestion > 1) {
-        nextBtn.classList.add("hide");
+        nextBtn.classList.remove("hide");
         prevBtn.classList.remove("hide");
         submitBtn.classList.remove("hide"); //hide submit btn
     }
