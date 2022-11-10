@@ -13,7 +13,7 @@ const restartBtn = document.getElementById("restart");
 const submitBtn = document.getElementById("submit");
 const answers = document.getElementById("answers");
 
-let result = document.getElementById("result");
+
 let currentQuestion = 0;
 let score = 0 ;
 let questionCounter = 0;
@@ -190,7 +190,7 @@ function submit() {
     
  /**message on submit depending on score */
     let result;
-    
+
     if (score >= 7) {
      result = "Well done, you did great!";
     } 
