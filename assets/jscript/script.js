@@ -118,11 +118,11 @@ function next(){
             }
         }
         userScore.innerHTML = score ;
-        if(questionCounter < 10) {
-            next();
-        }
-        else if(questionCounter === 10) {
+        if(questionCounter === 10) {
             submit();
+        }
+        else if(questionCounter < 10) {
+            next();
        }
     };
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
@@ -133,11 +133,11 @@ function next(){
            }
        }
        userScore.innerHTML = score;
-       if(questionCounter < 10) {
-           next();
+       if(questionCounter === 10) {
+           submit();
        }
-       else if(questionCounter === 10) {
-            submit();
+       else if(questionCounter < 10) {
+            next();
        }
     
     };
