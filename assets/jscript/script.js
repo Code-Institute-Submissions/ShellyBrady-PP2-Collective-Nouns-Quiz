@@ -102,7 +102,7 @@ restartBtn.addEventListener("click", restart);
 //next question function
 function next(){
     currentQuestion++;
-    if(currentQuestion >= 1) {
+    if(currentQuestion > 1) {
         nextBtn.classList.add("hide");
         prevBtn.classList.remove("hide");
         submitBtn.classList.remove("hide"); //hide submit btn
@@ -195,7 +195,7 @@ function submit() {
     trueBtn.classList.add("hide");
     falseBtn.classList.add("hide");  
     restartBtn.classList.remove("hide");
-    
+
  /**message on submit depending on score */
     let result;
 
@@ -221,7 +221,7 @@ function restart() {
     document.getElementById("result").innerHTML = " ";
     prevBtn.classList.remove("hide");
     restartBtn.classList.add("hide");
-    nextBtn.classList.remove("hide");
+    nextBtn.classList.add("hide");
     submitBtn.classList.remove("hide");
     trueBtn.classList.remove("hide");
     falseBtn.classList.remove("hide");
