@@ -196,6 +196,22 @@ function submit() {
  
   } 
  
+  /** reset score etc if restarted*/
+
+  function restart() {
+    currentQuestion = 0;
+    document.getElementById("result").innerHTML = " ";
+    prevBtn.classList.remove("hide");
+    nextBtn.classList.remove("hide");
+    submitBtn.classList.remove("hide");
+    trueBtn.classList.remove("hide");
+    falseBtn.classList.remove("hide");
+    score = 0;
+    userScore.innerHTML = score;
+    quizImage.src = " ";
+    beginQuiz();
+ }  
+
 /*this function mostly the same as previously submitted project as sourced
 https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript*/
 //function to begin quiz and to choose questions
