@@ -13,6 +13,7 @@ const restartBtn = document.getElementById("restart");
 const submitBtn = document.getElementById("submit");
 const answers = document.getElementById("answers");
 
+let result = document.getElementById("result");
 let currentQuestion = 0;
 let score = 0 ;
 let questionCounter = 0;
@@ -196,13 +197,13 @@ function submit() {
     
  /**message on submit depending on score */
     if (score >= 7) {
-     question = "Well done, you did great!";
+     result = "Well done, you did great!";
     } 
     if (score === 0) {
-     question = "Click Restart to begin again";
+     result = "Click Restart to begin again";
     }
     else {
-      question = "Maybe you should try again!";
+      result = "Maybe you should try again!";
     }
   } 
  
