@@ -115,6 +115,21 @@ function next(){
             next();
         }
     };
+    falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
+   falseBtn.onclick = () => {
+       if(questions[currentQuestion].answers[1].answer) {
+           if(score < 5) {
+               score++;
+           }
+       }
+       userScore.innerHTML = score;
+       if(currentQuestion < 5) {
+           next();
+       }
+   
+ 
+   prevBtn.classList.remove("hide");
+};
 
 
 /*this function mostly the same as previously submitted project as sourced
