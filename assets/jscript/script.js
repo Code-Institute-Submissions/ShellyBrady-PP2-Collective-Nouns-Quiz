@@ -194,7 +194,8 @@ function submit() {
     submitBtn.classList.add("hide");
     trueBtn.classList.add("hide");
     falseBtn.classList.add("hide");  
-
+    restartBtn.classList.remove("hide");
+    
  /**message on submit depending on score */
     let result;
 
