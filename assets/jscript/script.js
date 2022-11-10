@@ -203,7 +203,7 @@ function submit() {
     falseBtn.classList.remove("hide");
     score = 0;
     userScore.innerHTML = score;
-    beginQuiz();
+    startQuiz();
  }  
 
 /*this function mostly the same as previously submitted project as sourced
