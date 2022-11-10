@@ -110,30 +110,30 @@ function next(){
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            if(currentQuestion < 9) {
+            if(currentQuestion < 10) {
                 score++;
             }
         }
         userScore.innerHTML = score ;
-        if(currentQuestion < 9) {
+        if(currentQuestion < 10) {
             next();
         }
-        if(currentQuestion === 9) {
+        if(currentQuestion === 10) {
             submit();
        }
     };
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
    falseBtn.onclick = () => {
        if(questions[currentQuestion].answers[1].answer) {
-           if(currentQuestion < 9) {
+           if(currentQuestion < 10) {
                score++;
            }
        }
        userScore.innerHTML = score;
-       if(currentQuestion < 9) {
+       if(currentQuestion < 10) {
            next();
        }
-       if(currentQuestion === 9) {
+       if(currentQuestion === 10) {
             submit();
        }
     };
@@ -154,12 +154,12 @@ function prev() {
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            if(currentQuestion < 9) {
+            if(currentQuestion < 10) {
                 score++;
             }
         }
         userScore.innerHTML = score;
-        if(currentQuestion < 9) {
+        if(currentQuestion < 10) {
             next();
         }
     };
@@ -172,10 +172,10 @@ function prev() {
             }
         }
         userScore.innerHTML = score;
-        if(currentQuestion < 9) {
+        if(currentQuestion < 10) {
             next();
         }
-        if(currentQuestion === 9){
+        if(currentQuestion === 10){
             submit();
         }
     };
@@ -196,7 +196,7 @@ function submit() {
  /**message on submit depending on score */
     let result;
 
-    if (score >= 9) {
+    if (score >= 10) {
         result = "Wow, you really know your stuff!";
     }
     if (score >= 7) {
@@ -236,30 +236,30 @@ function startQuiz() {
   trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
   trueBtn.onclick = () => {
     if(questions[currentQuestion].answers[0].answer) {
-        if(currentQuestion < 9) {
+        if(currentQuestion < 10) {
             score++;
             }
     }
     userScore.innerHTML = score;
-    if(currentQuestion < 9) {
+    if(currentQuestion < 10) {
         next();
     }
-    if(currentQuestion === 9) {
+    if(currentQuestion === 10) {
         submit();
     }
     };
    falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
     falseBtn.onclick = () => {
         if(questions[currentQuestion].answers[1].answer) {
-            if(currentQuestion < 9) {
+            if(currentQuestion < 10) {
                 score++;
             }
         }
         userScore.innerHTML = score;
-        if(currentQuestion < 9) {
+        if(currentQuestion < 10) {
             next();
         }
-        if(currentQuestion === 9) {
+        if(currentQuestion === 10) {
             submit();
        }
     };
