@@ -114,35 +114,36 @@ function next(){
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            if(questionCounter <= 10) {
+            if(currentQuestion <= 10) {
                 score++;
             }
         }
        
-        if(questionCounter < 10) {
+        if(currentQuestion < 10) {
             next();
         }
-        if(questionCounter = 10) {
+        if(currentQuestion = 10) {
             submit();
        }
     };
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
-   falseBtn.onclick = () => {
+    falseBtn.onclick = () => {
        if(questions[currentQuestion].answers[1].answer) {
-           if(questionCounter < 10) {
+           if(currentQuestion < 10) {
                score++;
            }
        }
-       userScore.innerHTML = score;
-       if(questionCounter < 10) {
+       
+       if(currentQuestion < 10) {
            next();
        }
-       if(questionCounter = 10) {
+       if(currentQuestion = 10) {
             submit();
        }
+    userScore.innerHTML = score;
     };
  
-   prevBtn.classList.remove("hide");
+    prevBtn.classList.remove("hide");
 }
 
 /**function to make prev button work */
@@ -159,12 +160,12 @@ function prev() {
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            if(questionCounter < 10) {
+            if(currentQuestion < 10) {
                 score++;
             }
         }
         userScore.innerHTML = score;
-        if(questionCounter < 10) {
+        if(currentQuestion < 10) {
             next();
         }
     };
@@ -177,10 +178,10 @@ function prev() {
             }
         }
         userScore.innerHTML = score;
-        if(questionCounter < 10) {
+        if(currentQuestion < 10) {
             next();
         }
-        if(questionCounter = 10){
+        if(currentQuestion = 10){
             submit();
         }
     };
@@ -228,7 +229,6 @@ function restart() {
     submitBtn.classList.remove("hide");
     trueBtn.classList.remove("hide");
     falseBtn.classList.remove("hide");
-    userScore.innerHTML = score;
     score = 0;
     startQuiz();
  }  
