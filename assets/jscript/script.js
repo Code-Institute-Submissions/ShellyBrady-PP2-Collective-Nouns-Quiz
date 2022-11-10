@@ -121,7 +121,7 @@ function next(){
             }
         }
         userScore.innerHTML = score ;
-        if(questionCounter < 10) {
+        if(currentQuestion < 10) {
             next();
         }
         else {
@@ -136,7 +136,7 @@ function next(){
            }
         }
         userScore.innerHTML = score;
-        if(questionCounter < 10) {
+        if(currentQuestion < 10) {
         next();
         }
         else {
@@ -207,10 +207,7 @@ function submit() {
  /**message on submit depending on score */
     let result;
     
-    if (score === 10) {
-        result = "Wow, you really know your stuff!";
-    }
-    else if (score >= 7) {
+    if (score >= 7) {
      result = "Well done, you did great!";
     } 
     else {
