@@ -215,9 +215,11 @@ function submit() {
   /** reset score etc if restarted*/
 
 function restart() {
+    questionCounter = 0;
     currentQuestion = 0;
     document.getElementById("result").innerHTML = " ";
     prevBtn.classList.remove("hide");
+    restartBtn.classList.add("hide");
     nextBtn.classList.remove("hide");
     submitBtn.classList.remove("hide");
     trueBtn.classList.remove("hide");
