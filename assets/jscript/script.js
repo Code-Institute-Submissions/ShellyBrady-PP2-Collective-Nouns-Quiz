@@ -118,6 +118,9 @@ function next(){
         if(currentQuestion < 10) {
             next();
         }
+        if(currentQuestion = 10) {
+            submit();
+       }
     };
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
    falseBtn.onclick = () => {
@@ -129,6 +132,9 @@ function next(){
        userScore.innerHTML = score;
        if(currentQuestion < 10) {
            next();
+       }
+       if(currentQuestion = 10) {
+            submit();
        }
     };
  
@@ -230,6 +236,9 @@ function startQuiz() {
     if(currentQuestion < 10) {
         next();
     }
+    if(currentQuestion = 10) {
+        submit();
+    }
     };
    falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
     falseBtn.onclick = () => {
@@ -242,6 +251,9 @@ function startQuiz() {
         if(currentQuestion < 10) {
             next();
         }
+        if(currentQuestion = 10) {
+            submit();
+       }
     };
   
     prevBtn.classList.add("hide"); 
