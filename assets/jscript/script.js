@@ -169,6 +169,33 @@ function prev() {
     nextBtn.classList.remove("hide");
  }
 
+ /** function for submit button */
+
+function submit() {
+
+
+    prevBtn.classList.add("hide");
+    nextBtn.classList.add("hide");
+    submitBtn.classList.add("hide");
+    trueBtn.classList.add("hide");
+    falseBtn.classList.add("hide");  
+ 
+    let result;
+ /**message on submit depending on score */
+    if (score >= 3) {
+     quizImage.src = "assets/images/welldone.jpg";
+     result = "Well done, you did great!";
+    } else {
+     quizImage.src = "assets/images/tryagain.jpg";
+     result = "Maybe you should try again!";
+    }
+ 
+ /**image shown dependant on result */
+ document.getElementById("quiz-image").innerHTML = quizImage;
+ document.getElementById("result").innerHTML = result;
+ 
+  } 
+ 
 /*this function mostly the same as previously submitted project as sourced
 https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript*/
 //function to begin quiz and to choose questions
