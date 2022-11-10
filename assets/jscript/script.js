@@ -1,4 +1,7 @@
 /**Deleted all previous JS coding-will attempt to start from scratch on JS with no tutorial */
+/**based on code from 
+https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript
+with some changes */
 
 //Declare variables first as is best practice
 const question = document.getElementById("question");
@@ -118,12 +121,11 @@ function next(){
             }
         }
         userScore.innerHTML = score ;
-        if(questionCounter === 10) {
-            submit();
-        }
-        else if(questionCounter < 10) {
+        if(questionCounter < 10) {
             next();
-       }
+        }
+        else {
+        submit();
     };
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
     falseBtn.onclick = () => {
@@ -131,14 +133,13 @@ function next(){
            if(score < 10) {
                score++;
            }
-       }
-       userScore.innerHTML = score;
-       if(questionCounter === 10) {
-           submit();
-       }
-       else if(questionCounter < 10) {
-            next();
-       }
+        }
+        userScore.innerHTML = score;
+        if(questionCounter < 10) {
+        next();
+        }
+        else {
+          submit();
     
     };
  
