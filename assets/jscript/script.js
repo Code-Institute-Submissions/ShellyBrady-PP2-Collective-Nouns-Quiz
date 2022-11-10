@@ -15,7 +15,7 @@ const submitBtn = document.getElementById("submit");
 let currentQuestion = 0;
 let score = 0 ;
 let questionCounter = 0;
-
+let quizImage = document.getElementById('quiz-image');
 
 //set up questions array for quiz, add shuffle to change order
 let questions = [
