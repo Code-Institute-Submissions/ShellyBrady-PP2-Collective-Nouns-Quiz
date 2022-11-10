@@ -101,7 +101,6 @@ restartBtn.addEventListener("click", restart);
 //next question function
 function next(){
     currentQuestion++;
-}
     question.innerHTML = questions[currentQuestion].question;
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
@@ -126,10 +125,10 @@ function next(){
        if(currentQuestion < 5) {
            next();
        }
-   
+    };
  
    prevBtn.classList.remove("hide");
-};
+}
 
 
 /*this function mostly the same as previously submitted project as sourced
