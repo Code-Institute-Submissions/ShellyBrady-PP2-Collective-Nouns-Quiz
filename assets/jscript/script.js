@@ -130,6 +130,44 @@ function next(){
    prevBtn.classList.remove("hide");
 }
 
+/**function to make prev button work */
+//sourced from https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript*
+
+function prev() {
+    currentQuestion--;
+    if(currentQuestion <= 0) {
+        nextBtn.classList.remove("hide");
+        prevBtn.classList.add("hide");
+    }
+    questionText.innerHTML = questions[currentQuestion].question;
+    trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
+    trueBtn.onclick = () => {
+        if(questions[currentQuestion].answers[0].answer) {
+            if(score < 5) {
+                score++;
+            }
+        }
+        userScore.innerHTML = score;
+        if(currentQuestion < 5) {
+            next();
+        }
+    };
+  
+    falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
+    falseBtn.onclick = () => {
+        if(questions[currentQuestion].answers[1].answer) {
+            if(score < 5) {
+                score++;
+            }
+        }
+        userScore.innerHTML = score;
+        if(currentQuestion < 5) {
+            next();
+        }
+    };
+  
+    nextBtn.classList.remove("hide");
+ }
 
 /*this function mostly the same as previously submitted project as sourced
 https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript*/
