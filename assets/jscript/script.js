@@ -111,7 +111,7 @@ function next(){
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            if(currentQuestion < 10) {
+            if(questionCounter <= 10) {
                 score++;
             }
         }
