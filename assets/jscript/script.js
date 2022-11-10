@@ -144,7 +144,7 @@ function prev() {
         nextBtn.classList.remove("hide");
         prevBtn.classList.add("hide");
     }
-    questionText.innerHTML = questions[currentQuestion].question;
+    question.innerHTML = questions[currentQuestion].question;
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
