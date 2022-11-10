@@ -199,7 +199,6 @@ function submit() {
     falseBtn.classList.add("hide");  
     restartBtn.classList.remove("hide");
 
-    userScore.innerHTML = score;
  /**message on submit depending on score */
     let result;
 
@@ -231,7 +230,6 @@ function restart() {
     falseBtn.classList.remove("hide");
     userScore.innerHTML = score;
     score = 0;
-    userScore.innerHTML = score;
     startQuiz();
  }  
 
