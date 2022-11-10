@@ -202,7 +202,6 @@ function submit() {
     falseBtn.classList.remove("hide");
     score = 0;
     userScore.innerHTML = score;
-    quizImage.src = " ";
     beginQuiz();
  }  
 
