@@ -11,8 +11,8 @@ const prevBtn = document.getElementById("prev");
 const restartBtn = document.getElementById("restart");
 const submitBtn = document.getElementById("submit");
 const answers = document.getElementById("answers");
+const userScore = document.getElementById("user-score");
 
-let userScore = document.getElementById("user-score");
 let currentQuestion = 0;
 let score = 0 ;
 let questionCounter = 0;
@@ -140,7 +140,7 @@ function next(){
        if(currentQuestion = 10) {
             submit();
        }
-    userScore.innerHTML = score;
+    
     };
  
     prevBtn.classList.remove("hide");
@@ -202,7 +202,7 @@ function submit() {
 
  /**message on submit depending on score */
     let result;
-
+    userScore.innerHTML = score;
     if (score = 10) {
         result = "Wow, you really know your stuff!";
     }
@@ -229,6 +229,7 @@ function restart() {
     submitBtn.classList.remove("hide");
     trueBtn.classList.remove("hide");
     falseBtn.classList.remove("hide");
+    userScore.innerHTML = score;
     score = 0;
     startQuiz();
  }  
@@ -263,7 +264,7 @@ function startQuiz() {
                 score++;
             }
         }
-        
+        userScore.innerHTML = score;
         if(currentQuestion < 10) {
             next();
         }
