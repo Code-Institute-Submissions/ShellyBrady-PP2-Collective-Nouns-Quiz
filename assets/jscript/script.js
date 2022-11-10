@@ -140,7 +140,7 @@ function next(){
         }
         else {
           submit();
-    
+        }
     };
  
     prevBtn.classList.remove("hide");
