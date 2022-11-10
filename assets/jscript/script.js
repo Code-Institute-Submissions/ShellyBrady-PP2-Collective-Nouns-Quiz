@@ -105,6 +105,7 @@ function next(){
     if(currentQuestion >= 1) {
         nextBtn.classList.add("hide");
         prevBtn.classList.remove("hide");
+        submitBtn.classList.remove("hide"); //hide submit btn
     }
     question.innerHTML = questions[currentQuestion].question;
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
