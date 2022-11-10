@@ -35,13 +35,7 @@ If the user clicks the button labelled with the correct answer for the current q
 ### The Controls
 The latter part of the quiz is taken up by the control buttons- prev/next, restart and submit. The restart button resets the quiz to its original view. The submit button submits the user's score and delivers feedback on the user's performance.
 If the user gets less than three questions correct, they will see a message that says, "Maybe you should try again!" An image of a litter of kittens with sad faces will show under the feedback.
-If the user gets 3 or more points, they will see a message that says, "Well done, you did great!" accompanied by a photo of dolphins that look like they are smiling.
-
-
-![Try Again Message](README.Images/try%20again!.PNG)  
-
-
-![Well Done Message](README.Images/well%20done.PNG)
+If the user gets 7 or more points, they will see a message that says, "Well done, you did great!" accompanied by a photo of dolphins that look like they are smiling.
 
 
 
@@ -156,18 +150,32 @@ Once the master branch has been selected, the page will be automatically refresh
 
 The live link can be found here -[Collective Noun Quiz](https://shellybrady.github.io/PP2-Collective-Nouns-Quiz/)
 
+### To Fork and Clone the repository
+<br>
+
+If you need instructions to fork or clone the repo please see the following links:
+- [fork repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+
+- [clone repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository)
+<br>
+
+
 # Credits 
 
 ## Content
 - The fonts used were imported from Google Fonts https://fonts.google.com
 
 ## Media
-- Images are open source and from Pixabay.
+- Images are open source and from Pixabay. I ended up not using these second time around.
 
 ## Code
 Credit and Acknowledgment to the following sites for help with code or inspiration:
 - W3Schools for general information.
 - www.codingninjas.com for a lot of basic code help to start my project off with.
+- I have really struggled with JavaScript and have not yet conquered it. 
+  I used the following tutorial as the basis for my project. Although I spent days and days 
+  changing the code to make it my own, everything kept breaking. I realise I may have failed again and if I have to repeat this project again I would choose a completely different project.
+  So in saying that, huge credit must go to https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript.
 - Stack Overflow, Geeks4Geeks and Code Institute for tips, etc.
 - amiresponsive? for image of deployed website of different devices.
 - Balsamiq for making wireframes.
@@ -175,5 +183,6 @@ Credit and Acknowledgment to the following sites for help with code or inspirati
 # Acknowledgments
 
 I would like to thank everyone at Code Institute for the support and guidance, my cohort on Slack and the wider Slack community.
+As above, I must acknowledge www.codingninjas.com for their tutorial which I used to get any kind of project in JS sent in.
 I would also like to thank my family and my cats for not giving up on me when JavaScript made me want to give up on myself.
 
