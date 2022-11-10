@@ -193,16 +193,16 @@ function submit() {
     submitBtn.classList.add("hide");
     trueBtn.classList.add("hide");
     falseBtn.classList.add("hide");  
- 
+    
  /**message on submit depending on score */
     if (score >= 7) {
-     result = "Well done, you did great!";
+     question = "Well done, you did great!";
     } 
     if (score === 0) {
-     result = "Click Restart to begin again";
+     question = "Click Restart to begin again";
     }
     else {
-        result = "Maybe you should try again!";
+      question = "Maybe you should try again!";
     }
   } 
  
