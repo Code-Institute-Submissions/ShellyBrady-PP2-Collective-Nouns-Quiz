@@ -102,6 +102,10 @@ restartBtn.addEventListener("click", restart);
 //next question function
 function next(){
     currentQuestion++;
+    if(currentQuestion >= 1) {
+        nextBtn.classList.add("hide");
+        prevBtn.classList.remove("hide");
+    }
     question.innerHTML = questions[currentQuestion].question;
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
