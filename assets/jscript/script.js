@@ -13,7 +13,7 @@ const restartBtn = document.getElementById("restart");
 const submitBtn = document.getElementById("submit");
 const answers = document.getElementById("answers");
 
-let result = document.getElementById("result").innerHTML;
+
 let currentQuestion = 0;
 let score = 0 ;
 let questionCounter = 0;
@@ -207,7 +207,7 @@ function submit() {
       result = "Maybe you should try again!";
     }
     
-
+  document.getElementById("result").innerHTML = result;
     
   } 
  
