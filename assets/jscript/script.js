@@ -17,7 +17,6 @@ const answers = document.getElementById("answers");
 let currentQuestion = 0;
 let score = 0 ;
 let questionCounter = 0;
-let quizImage = document.getElementById('quiz-image');
 
 //set up questions array for quiz, add shuffle to change order
 let questions = [
@@ -143,7 +142,7 @@ function next(){
 }
 
 /**function to make prev button work */
-//sourced from https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript*
+//based on code from https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript*
 
 function prev() {
     currentQuestion--;
@@ -200,9 +199,6 @@ function submit() {
     if (score >= 7) {
      result = "Well done, you did great!";
     } 
-    if (score = 0) {
-     result = "Click restart to begin again";
-    }
     else {
       result = "Maybe you should try again!";
     }
@@ -227,7 +223,8 @@ function restart() {
  }  
 
 /*this function mostly the same as previously submitted project as sourced
-https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript*/
+https://www.codingninjas.com/codestudio/library/how-to-create-a-quiz-app-using-javascript
+with some changes*/
 //function to begin quiz and to choose questions
 function startQuiz() {
   currentQuestion = 0;
