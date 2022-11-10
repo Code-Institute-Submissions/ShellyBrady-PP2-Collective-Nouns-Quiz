@@ -182,17 +182,11 @@ function submit() {
  
     let result;
  /**message on submit depending on score */
-    if (score >= 3) {
-     quizImage.src = "/workspace/PP2-Collective-Nouns-Quiz/assets/images/welldone.jpg";
+    if (score >= 5) {
      result = "Well done, you did great!";
     } else {
-     quizImage.src = "/workspace/PP2-Collective-Nouns-Quiz/assets/images/tryagain.jpg";
      result = "Maybe you should try again!";
     }
- 
- /**image shown dependant on result */
- document.getElementById("quiz-image").innerHTML = quizImage;
- document.getElementById("result").innerHTML = result;
  
   } 
  
