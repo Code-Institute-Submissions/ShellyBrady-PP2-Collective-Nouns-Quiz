@@ -105,24 +105,24 @@ function next(){
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            if(score < 5) {
+            if(score < 10) {
                 score++;
             }
         }
         userScore.innerHTML = score ;
-        if(currentQuestion < 5) {
+        if(currentQuestion < 10) {
             next();
         }
     };
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
    falseBtn.onclick = () => {
        if(questions[currentQuestion].answers[1].answer) {
-           if(score < 5) {
+           if(score < 10) {
                score++;
            }
        }
        userScore.innerHTML = score;
-       if(currentQuestion < 5) {
+       if(currentQuestion < 10) {
            next();
        }
     };
