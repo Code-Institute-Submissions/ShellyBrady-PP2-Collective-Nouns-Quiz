@@ -2,7 +2,6 @@
 
 //Declare variables first as is best practice
 const question = document.getElementById("question");
-const maxQuestion = 10;
 const trueBtn = document.getElementById("True");
 const falseBtn = document.getElementById("False");
 const totalScore = document.getElementById("total-score");
@@ -122,7 +121,7 @@ function next(){
         if(currentQuestion < 10) {
             next();
         }
-        if(currentQuestion = 10) {
+        if(currentQuestion === 10) {
             submit();
        }
     };
@@ -137,7 +136,7 @@ function next(){
        if(currentQuestion < 10) {
            next();
        }
-       if(currentQuestion = 10) {
+       if(currentQuestion === 10) {
             submit();
        }
     
@@ -181,7 +180,7 @@ function prev() {
         if(currentQuestion < 10) {
             next();
         }
-        if(currentQuestion = 10){
+        if(currentQuestion === 10){
             submit();
         }
     };
@@ -202,11 +201,11 @@ function submit() {
 
  /**message on submit depending on score */
     let result;
-    userScore.innerHTML = score;
-    if (score = 10) {
+    
+    if (userScore === 10) {
         result = "Wow, you really know your stuff!";
     }
-    else if (score >= 7) {
+    else if (userScore >= 7) {
      result = "Well done, you did great!";
     } 
     else {
