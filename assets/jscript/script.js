@@ -187,8 +187,16 @@ function prev() {
  /** function for submit button */
 
 function submit() {
-    
+
+    prevBtn.classList.add("hide");
+    nextBtn.classList.add("hide");
+    submitBtn.classList.add("hide");
+    trueBtn.classList.add("hide");
+    falseBtn.classList.add("hide");  
+
  /**message on submit depending on score */
+    let result;
+
     if (score >= 7) {
      result = "Well done, you did great!";
     } 
@@ -199,12 +207,8 @@ function submit() {
       result = "Maybe you should try again!";
     }
     
+
     
-    prevBtn.classList.add("hide");
-    nextBtn.classList.add("hide");
-    submitBtn.classList.add("hide");
-    trueBtn.classList.add("hide");
-    falseBtn.classList.add("hide");  
   } 
  
   /** reset score etc if restarted*/
