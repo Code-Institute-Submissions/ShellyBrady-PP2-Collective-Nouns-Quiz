@@ -126,6 +126,7 @@ function next(){
         }
         else {
         submit();
+        }
     };
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
     falseBtn.onclick = () => {
