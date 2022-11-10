@@ -109,6 +109,7 @@ function next(){
         prevBtn.classList.remove("hide");
         submitBtn.classList.remove("hide"); //hide submit btn
     }
+    
     question.innerHTML = questions[currentQuestion].question;
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
@@ -117,7 +118,7 @@ function next(){
                 score++;
             }
         }
-        userScore.innerHTML = score ;
+       
         if(questionCounter < 10) {
             next();
         }
@@ -228,6 +229,7 @@ function restart() {
     submitBtn.classList.remove("hide");
     trueBtn.classList.remove("hide");
     falseBtn.classList.remove("hide");
+    userScore.innerHTML = score;
     score = 0;
     userScore.innerHTML = score;
     startQuiz();
