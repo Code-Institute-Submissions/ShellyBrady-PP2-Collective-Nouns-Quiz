@@ -118,7 +118,7 @@ function next(){
         if(currentQuestion < 10) {
             next();
         }
-        if(currentQuestion = 10) {
+        if(currentQuestion === 10) {
             submit();
        }
     };
@@ -133,7 +133,7 @@ function next(){
        if(currentQuestion < 10) {
            next();
        }
-       if(currentQuestion = 10) {
+       if(currentQuestion === 10) {
             submit();
        }
     };
@@ -175,7 +175,7 @@ function prev() {
         if(currentQuestion < 10) {
             next();
         }
-        if(currentQuestion = 10){
+        if(currentQuestion === 10){
             submit();
         }
     };
@@ -197,10 +197,13 @@ function submit() {
  /**message on submit depending on score */
     if (score >= 7) {
      result = "Well done, you did great!";
-    } else {
-     result = "Maybe you should try again!";
+    } 
+    if (score === 0) {
+     result = "Click Restart to begin again";
     }
- 
+    else {
+        result = "Maybe you should try again!";
+    }
   } 
  
   /** reset score etc if restarted*/
@@ -236,7 +239,7 @@ function startQuiz() {
     if(currentQuestion < 10) {
         next();
     }
-    if(currentQuestion = 10) {
+    if(currentQuestion === 10) {
         submit();
     }
     };
@@ -251,7 +254,7 @@ function startQuiz() {
         if(currentQuestion < 10) {
             next();
         }
-        if(currentQuestion = 10) {
+        if(currentQuestion === 10) {
             submit();
        }
     };
