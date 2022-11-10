@@ -121,7 +121,7 @@ function next(){
         if(questionCounter < 10) {
             next();
         }
-        if(questionCounter === 10) {
+        else if(questionCounter === 10) {
             submit();
        }
     };
@@ -136,7 +136,7 @@ function next(){
        if(questionCounter < 10) {
            next();
        }
-       if(questionCounter === 10) {
+       else if(questionCounter === 10) {
             submit();
        }
     
@@ -167,6 +167,9 @@ function prev() {
         if(questionCounter < 10) {
             next();
         }
+        else if(questionCounter === 10) {
+            submit();
+        }
     };
   
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
@@ -180,7 +183,7 @@ function prev() {
         if(questionCounter < 10) {
             next();
         }
-        if(questionCounter === 10) {
+        else if(questionCounter === 10) {
             submit();
         }
     };
@@ -252,7 +255,7 @@ function startQuiz() {
     if(questionCounter< 10) {
         next();
     }
-    if(questionCounter === 10) {
+    else if(questionCounter === 10) {
         submit();
     }
     };
@@ -267,7 +270,7 @@ function startQuiz() {
         if(questionCounter < 10) {
             next();
         }
-        if(questionCounter === 10) {
+        else if(questionCounter === 10) {
             submit();
        }
     };
