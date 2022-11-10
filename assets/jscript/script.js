@@ -2,7 +2,7 @@
 
 //Declare variables first as is best practice
 const question = document.getElementById("question");
-const maxQuestion = 5;
+const maxQuestion = 10;
 const trueBtn = document.getElementById("True");
 const falseBtn = document.getElementById("False");
 const totalScore = document.getElementById("total-score");
