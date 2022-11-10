@@ -196,6 +196,9 @@ function submit() {
  /**message on submit depending on score */
     let result;
 
+    if (score >= 9) {
+        result = "Wow, you really know your stuff!";
+    }
     if (score >= 7) {
      result = "Well done, you did great!";
     } 
