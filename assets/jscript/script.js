@@ -119,7 +119,7 @@ function next(){
         if(questionCounter < 10) {
             next();
         }
-        if( questionCounter === 10) {
+        if( questionCounter === 9) {
             submit();
        }
     };
@@ -134,7 +134,7 @@ function next(){
        if(questionCounter < 10) {
            next();
        }
-       if(questionCounter === 10) {
+       if(questionCounter === 9) {
             submit();
        }
     };
@@ -201,7 +201,7 @@ function submit() {
     if (score === 10) {
         result = "Wow, you really know your stuff!";
     }
-    if (score >= 7) {
+    else if (score >= 7) {
      result = "Well done, you did great!";
     } 
     else {
