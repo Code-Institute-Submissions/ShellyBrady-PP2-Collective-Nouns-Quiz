@@ -107,6 +107,9 @@ function next(){
         prevBtn.classList.remove("hide");
         submitBtn.classList.remove("hide"); //hide submit btn
     }
+    if(currentQuestion = 10) {
+        submit();
+    }
     question.innerHTML = questions[currentQuestion].question;
     trueBtn.innerHTML = questions[currentQuestion].answers[0].option;
     trueBtn.onclick = () => {
